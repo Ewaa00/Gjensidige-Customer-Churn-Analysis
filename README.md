@@ -16,12 +16,12 @@ This project delivers an end-to-end data analysis focused on customer churn driv
 **Recommendation:** Launch an immediate market audit in Germany to identify localized friction points, customer dissatisfaction reasons, or aggressive competitor pricing.
 
 ### 2. Demographic Vulnerability (Pre-Retirement Segment)
-![Dashboard Page 2](strona2.png)
+![Dashboard Page 3](strona3.png)
 **Insight:** Customers aged **45+ (Pre-Retirement)** have a massive **45.33%** churn rate, departing significantly faster than younger cohorts.
 **Recommendation:** Develop tailored insurance and financial loyalty retention packages focusing on wealth preservation and senior-friendly service perks.
 
 ### 3. Behavioral Paradox (Multi-Product Friction)
-![Dashboard Page 3](strona3.png)
+![Dashboard Page 2](strona2.png)
 **Insight:** Inactive members churn heavily. More importantly, there is a severe spike in churn among users holding **3 or 4 products** (approaching nearly 100%).
 **Recommendation:** Urgently audit the customer journey and renewal pricing strategy for multi-product clients. Set up an automated **Early Warning System (EWS)** to trigger engagement campaigns when an account goes inactive for over 30 days.
 
