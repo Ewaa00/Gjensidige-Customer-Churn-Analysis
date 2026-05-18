@@ -1,0 +1,51 @@
+
+#Total Customers
+SELECT COUNT(*) AS total_customers
+FROM gjensidige_dane gd ;
+
+
+#Churn Rate
+SELECT 
+    ROUND(
+        100.0 * SUM(churn) / COUNT(*),
+        2
+    ) AS churn_rate
+FROM gjensidige_dane gd ;
+
+#Churn by Country
+SELECT
+    country,
+    COUNT(*) AS customers,
+    SUM(churn) AS churned_customers,
+    ROUND(100.0 * SUM(churn) / COUNT(*), 2) AS churn_rate
+FROM gjensidige_dane gd 
+GROUP BY country
+ORDER BY churn_rate DESC;
+
+#Average Balance by Churn
+SELECT
+    churn,
+    ROUND(AVG(balance), 2) AS avg_balance
+FROM gjensidige_dane gd 
+GROUP BY churn;
+
+#Age Group Analysis
+SELECT
+    CASE
+        WHEN age < 30 THEN 'Young'
+        WHEN age <= 45 THEN 'Mid-Career'
+        ELSE 'Pre-Retirement'
+    END AS age_group,
+
+    COUNT(*) AS customers,
+
+    ROUND(
+        100.0 * SUM(churn) / COUNT(*),
+        2
+    ) AS churn_rate
+
+FROM gjensidige_dane gd
+
+GROUP BY age_group
+
+ORDER BY churn_rate DESC;
